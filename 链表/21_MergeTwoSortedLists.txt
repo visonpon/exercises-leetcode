@@ -24,5 +24,23 @@ class Solution:
             l=l.next
             l2=l2.next
         return h.next
+	
+	
+class solution:
+    def mergeTwoLists(head1,head2):
+        temp = None
+	if head1 == None:
+	    return head2
+	if head2 == None:
+	    return head1
+	if head1.val < head2.val:
+	    temp = head1
+	    temp.next = mergeTwoLists(head1.next,head2)
+	else:
+	    temp = head2
+	    temp.next = mergeTwoLists(head1,head2.next)
+	return temp
+	    
+	    
 		
 空间复杂度是O1，而不是On，这比一次次新建节点实例要强多了。
