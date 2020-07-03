@@ -25,7 +25,8 @@ class Solution:
             l2=l2.next
         return h.next
 	
-	
+
+[blog](https://www.cnblogs.com/lightwindy/p/8503688.html)	
 class solution:
     def mergeTwoLists(head1,head2):
         temp = None
