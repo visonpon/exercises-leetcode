@@ -30,7 +30,7 @@ class Solution:
                 j = j + 1
         return j+1
 	
-			
+#替换和开辟空间放入思想！！！！
 class Solution:
     def removeDuplicates(self, nums):
         lastIndex = 0
