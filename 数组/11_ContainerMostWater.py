@@ -1,3 +1,4 @@
+#双指针思路，两头往中间走。
 class Solution:
     def maxArea(self, height):
         """
