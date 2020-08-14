@@ -5,7 +5,7 @@ class Solution:
         :type k: int
         :rtype: int
         """
-        k=self.findKthLargestHelper(nums,len(nums)-k,0,len(nums)-1)
+        k=self.findKthLargestHelper(nums,len(nums)-k,0,len(nums)-1)#注意这里的转换，从小到大排序，第k大的元素，其索引是len(arr)-k.
         return k
         
     def findKthLargestHelper(self,nums,k,first,last):
