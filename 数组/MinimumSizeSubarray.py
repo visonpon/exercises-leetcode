@@ -26,3 +26,16 @@ class Solution:
 为什么会加个1，就是因为如果出现上述情况，那么r虽然加了1，但是l并没有，即，19行所说的整体向前在这种情况下是错误的，只有r向前了
 因此，r-l就已经等于len(nums)了
 所以，我们的minlen初始化必须是大于等于len(nums)+1的，这样20 21两行才会起作用。
+
+def solution(arr,s):
+    n = len(arr)
+    start = 0
+    sum = 0
+    minlength = n+1
+    for i in range(n):
+        sum +=arr[i]
+	while(sum>=s):
+	    minlength  = min(minlength , i-start+1)
+	    sum -=arr[start]
+	    start +=1
+    return minlength == n+1?0:minlength
